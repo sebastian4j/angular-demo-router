@@ -1,0 +1,14 @@
+<ul>
+  <li><a [routerLink]="['/dos']" skipLocationChange>componente dos (no cambia url)</a></li>
+  <li><a [routerLink]="['/uno']">componente uno</a></li>
+  <li><a [routerLink]="['/parametros', paramEstatico, paramDinamico]" [queryParams]="queries">componente parametro</a></li>
+  <li><a [routerLink]="['/qwerty']">no existe</a></li>
+</ul>
+<span>
+  <button (click)="navegarCompDos()">componente dos</button>
+  <button (click)="navegarCompUno()">componente uno</button>
+  <button (click)="navegarCompParametros()">componente parametro (no cambia url)</button>
+</span>
+<div>
+  <router-outlet></router-outlet>
+</div>
